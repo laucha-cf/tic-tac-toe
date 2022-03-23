@@ -27,7 +27,7 @@ class HumanPlayer(Player):
         valid_square = False
         val = None
         while not valid_square:
-            square = input(f'{self.letter}´s turn. Input move (0-9): ')
+            square = input(f'{self.letter}´s turn. Input move (0-8): ')
             try:
                 #trying to cast de answer to a integer
                 #checking if the value is an valid move
@@ -37,3 +37,5 @@ class HumanPlayer(Player):
                 valid_square = True
             except ValueError:
                 print('Invalid square. Try again.')
+
+        return val
